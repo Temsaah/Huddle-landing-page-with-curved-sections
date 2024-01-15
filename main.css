@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+:root {
+  --clr-primary-pink: hsl(322, 100%, 66%);
+
+  --clr-neutral-v-pale-cyan: hsl(193deg 26.1% 85.28%);
+  --clr-neutral-v-dark-cyan: hsl(192, 100%, 9%);
+  --clr-neutral-grayish-blue: hsl(208, 11%, 55%);
+
+  --ff-heading: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+
+  --fw-body-sb: 400;
+  --fw-body-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--ff-body);
+  background-color: var(--clr-neutral-v-pale-cyan);
+}
+
+.container {
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+header img {
+  max-width: 60%;
+}
+
+header button {
+  padding: 0.5rem 2rem;
+  background-color: var(--clr-neutral-v-pale-cyan);
+  border: 1px solid var(--clr-primary-pink);
+  color: var(--clr-primary-pink);
+  font-weight: var(--fw-body-sb);
+  border-radius: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+header button:hover {
+  color: hsl(322deg 88.52% 80.72%);
+  border: 1px solid hsl(322deg 88.52% 80.72%);
+}
+
+@media (max-width: 350px) {
+  header button {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+.even-columns {
+  display: grid;
+  text-align: center;
+}
+
+.even-columns * {
+  margin-bottom: 2rem;
+}
+
+.even-columns > * {
+  margin-bottom: 2rem;
+}
+
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  color: var(--clr-neutral-v-dark-cyan);
+}
+
+.btn {
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: var(--clr-primary-pink);
+  color: white;
+  width: 80%;
+  max-width: 250px;
+  font-size: 0.9rem;
+  font-weight: var(--fw-body-bold);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsl(322deg 86.39% 72.16%);
+}
+
+.container-2 {
+  padding: 3rem;
+}
+
+.container-2 p {
+  color: var(--clr-neutral-grayish-blue);
+}
+
+.container-2 .even-columns * {
+  margin-bottom: 1rem;
+}
+
+.container-2 .even-columns > * {
+  margin-bottom: 2rem;
+}
+
+.get-started {
+  border-radius: 1rem;
+}
+
+@media (min-width: 600px) {
+  .get-started {
+    margin-inline: auto;
+  }
+}
+
+.get-started .container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.get-started h2 {
+  margin-bottom: 2rem;
+  font-size: 2.3rem;
+}
+
+footer {
+  background-color: var(--clr-neutral-v-dark-cyan);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer .newsletter,
+footer h2 {
+  color: white;
+}
+
+footer .logo img {
+  margin-top: 7rem;
+  width: 50%;
+  max-width: 200px;
+}
+
+footer .info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer .info .contact {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+footer .info .contact > * {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  color: white;
+}
+
+footer .info .location img {
+  align-self: start;
+  margin-top: 5px;
+}
+
+footer .container > *:not(.copyright) {
+  margin-bottom: 3rem;
+}
+
+footer nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer nav ul li {
+  margin-bottom: 1rem;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer section:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer .copyright {
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: var(--fw-body-sb);
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials > * {
+  border: 1px solid white;
+  border-radius: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+
+.socials > *:hover {
+  color: var(--clr-primary-pink);
+  border: 1px solid var(--clr-primary-pink);
+}
+
+footer .newsletter {
+  padding: 2rem 3rem;
+  margin-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 2rem;
+  max-width: 40rem;
+}
+
+footer .newsletter p {
+  max-width: 40ch;
+}
+
+.newsletter .info {
+  gap: 1rem;
+}
+
+.newsletter .email-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.newsletter .btn {
+  flex: 1;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.newsletter input {
+  flex: 2;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 800px) {
+  .even-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .even-columns > * {
+    text-align: start;
+  }
+
+  .container,
+  header {
+    padding: 2rem 3rem;
+  }
+
+  .build-community .even-columns > div:first-child {
+    max-width: 60ch;
+  }
+
+  .container-2 {
+    padding: 6rem;
+  }
+
+  .container-2 .even-columns p {
+    max-width: 50ch;
+  }
+
+  :is(.grow-together, .your-users) .even-columns > div:first-child {
+    order: 1;
+  }
+
+  footer .container > * {
+    margin-top: 6rem;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer .info .logo img {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  footer .container .info .logo {
+    display: inline;
+  }
+
+  footer .container .location p {
+    max-width: 40ch;
+  }
+
+  footer nav ul {
+    columns: 2;
+    column-gap: 5rem;
+  }
+
+  footer .container {
+    position: relative;
+  }
+
+  footer .copyright {
+    position: absolute;
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 950px) {
+  footer .container .location p {
+    max-width: 20ch;
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+  }
+
+  footer .logo > :first-child {
+    margin-top: 0 !important;
+    width: 100% !important;
+  }
+
+  footer .container {
+    grid-row: 2;
+    padding-inline: 2rem;
+  }
+
+  footer .newsletter {
+    margin-top: 0;
+    padding: 0;
+    padding-inline: 2rem;
+  }
+}
